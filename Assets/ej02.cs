@@ -20,14 +20,14 @@ public class ej02 : MonoBehaviour
     {
         if (precio1 + precio2 + precio3 >= montoDisponible)
         {
-            dineroRestante = precio1 + precio2 + precio3 - montoDisponible;
-            Debug.Log("La suma de el precio de los 3 productos supera el monto disponible. Sobran $" + dineroRestante);
+            dineroFaltante = (precio1 + precio2 + precio3) - montoDisponible;
+            Debug.Log("La suma de el precio de los 3 productos supera el monto disponible. Faltan $" + dineroFaltante);
        
         }
         else
         {
-            dineroFaltante = montoDisponible - precio1 + precio2 + precio3;
-            Debug.Log("La suma de el precio de los 3 productos no supera el monto disponible. Faltan $" + dineroFaltante);
+            dineroRestante = montoDisponible - (precio1 + precio2 + precio3);
+            Debug.Log("La suma de el precio de los 3 productos no supera el monto disponible. Sobran $" + dineroRestante);
         }
 
 
